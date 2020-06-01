@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	printf("\n\t*****  Files In C Programming  *****");
+	FILE *fp;
+	fp=fopen("Duplicate Elements.txt","w");
+	int i;
+	char a[]="FOOTBALL";
+	int n;
+	n=strlen(a);
+	char b[n];
+	for(i=0;i<n;i++)
+	{
+	    b[i]=a[i];
+	}
+	for(i=0;i<n;i++)
+	{
+	  for(int j=i+1;j<n;j++)
+	   {
+	   	if(a[i]==b[j]) 
+	   	{
+	   	printf("\n\n\t     Duplicate Element is ' %c '\n",a[i]);
+	   	fprintf(fp,"\n\t     Duplicate Element is ' %c '\n",a[i],a[n]);
+	   	}
+	   }
+	}
+	fclose(fp);	
+	return 0;
+}
