@@ -13,7 +13,7 @@ int main()
 	{
 	    b[i]=a[i];
 	}
-	int res=duplicate(a,b,n);
+	 int res=duplicate(a,b,n);
 	printf("\n\t %d  Duplicate elements found",res);
 	return 0;
 }
