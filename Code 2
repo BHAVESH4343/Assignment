@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+void duplicate();
+int main()
+{
+	printf("\n\tWithout Argument Without Return Type\n\n");
+	duplicate();
+	return 0;
+}
+void duplicate()
+{
+	
+	int i;
+	char a[]="FOOTBALL";
+	int n;
+	n=strlen(a);
+	char b[n];
+	for(i=0;i<n;i++)
+	{
+	    b[i]=a[i];
+	}
+	for(i=0;i<n;i++)
+	{
+	  for(int j=i+1;j<n;j++)
+	   {
+	   	if(a[i]==b[j]) 
+	   	{
+	   	printf("\n\t     Duplicate Element is ' %c '\n",a[i]);
+	   	}
+	   }
+	}	
+}
