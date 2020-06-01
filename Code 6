@@ -4,6 +4,7 @@ int main()
 {
 	printf("Recursion in C");
 	int x,r;
+	printf("Sum OF The Given Number");
 	scanf("%d",&x);
 	r=sum(x);
 	printf("%d",r);
