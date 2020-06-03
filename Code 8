@@ -1,0 +1,42 @@
+#include<stdio.h>
+struct football
+{
+char playername[50];
+char clubname[50];
+int playerno,achievements;
+};
+int main()
+{
+int i,g=1;
+struct football e[50];
+for(i=0;i<2;i++)
+{
+	printf("Enter the data for Employee - %d\n",g);
+	g++;
+	scanf("%d\n",&e[i].playerno);
+	scanf("%s\n",e[i].playername);
+	scanf("%s\n",e[i].clubname);
+	scanf("%d",&e[i].achievements);
+}
+printf("\n\n\n");
+for(i=0;i<2;i++)
+{
+	printf("PlayerNo=%d\n",e[i].playerno);
+	printf("Player Name=%s\n",e[i].playername);
+	printf("Club Name=%s\n",e[i].clubname);
+	printf("Achievemnts=%d\n\n",e[i].achievements);
+}
+struct football *p;
+int sum=0;
+p=&e[50];
+for(i=0;i<2;i++)
+{
+
+	sum+=e[i].achievements;
+	p++;
+}
+printf("\n\nSum of both the Achievements = %d",sum);
+
+
+return 0;
+}
